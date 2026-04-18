@@ -18,8 +18,7 @@
         "title": "TicTacDoh Simplified DFD",
         "version": "2.0.0",
         "cells": [
-          /* Actor */
-          {
+                      {
             "id": "actor-user",
             "shape": "actor",
             "position": { "x": 20, "y": 220 },
@@ -37,7 +36,6 @@
             },
             "visible": true
           },
-          /* Trust boundaries */
           {
             "id": "tb1",
             "shape": "trust-boundary-box",
@@ -89,7 +87,6 @@
             },
             "visible": true
           },
-          /* Stores */
           {
             "id": "store-runtime",
             "shape": "store",
@@ -150,7 +147,6 @@
             },
             "visible": true
           },
-          /* Processes */
           {
             "id": "proc-bootstrap",
             "shape": "process",
@@ -301,7 +297,6 @@
             },
             "visible": true
           },
-          /* Data flows */
           { "id": "flow-u-bootstrap", "shape": "flow", "source": { "cell": "actor-user" }, "target": { "cell": "proc-bootstrap" }, "attrs": { "line": { "stroke": "#333333", "strokeWidth": 1, "targetMarker": { "name": "block" } } }, "data": { "name": "start", "description": "User launches the application." }, "visible": true },
           { "id": "flow-bootstrap-init", "shape": "flow", "source": { "cell": "proc-bootstrap" }, "target": { "cell": "proc-init" }, "attrs": { "line": { "stroke": "#333333", "strokeWidth": 1, "targetMarker": { "name": "block" } } }, "data": { "name": "startup calls", "description": "Bootstrap calls persistent storage initialisation." }, "visible": true },
           { "id": "flow-bootstrap-runtime", "shape": "flow", "source": { "cell": "proc-bootstrap" }, "target": { "cell": "store-runtime" }, "attrs": { "line": { "stroke": "#333333", "strokeWidth": 1, "targetMarker": { "name": "block" } } }, "data": { "name": "startup state", "description": "Bootstrap initialises runtime state." }, "visible": true },
